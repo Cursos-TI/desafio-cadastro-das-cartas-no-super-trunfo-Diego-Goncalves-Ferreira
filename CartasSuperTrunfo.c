@@ -117,56 +117,5 @@ int main() {
     printf("Densidade populacional (vence o menor): %d\n", densidade_1 < densidade_2);
     printf("PIB per capita: %d\n", PIB_per_capita_1 > PIB_per_capita_2);
     printf("Super Poder: %d\n", SuperPoder_1 > SuperPoder_2);
-    
-
-    int vitorias_carta1 = 0;
-    int vitorias_carta2 = 0;
-    int resultado;
-
-    printf("\n--- Comparação de Cartas ---\n\n");
-
-    resultado = populacao_1 > populacao_2;
-    vitorias_carta1 += resultado;
-    vitorias_carta2 += !resultado;
-    printf("População: Carta %d venceu (%d)\n", resultado ? 1 : 2, resultado);
-
-    resultado = area_1 > area_2;
-    vitorias_carta1 += resultado;
-    vitorias_carta2 += !resultado;
-    printf("Área: Carta %d venceu (%d)\n", resultado ? 1 : 2, resultado);
-
-    resultado = PIB_1 > PIB_2;
-    vitorias_carta1 += resultado;
-    vitorias_carta2 += !resultado;
-    printf("PIB: Carta %d venceu (%d)\n", resultado ? 1 : 2, resultado);
-
-    resultado = pontos_turisticos_1 > pontos_turisticos_2;
-    vitorias_carta1 += resultado;
-    vitorias_carta2 += !resultado;
-    printf("Pontos Turísticos: Carta %d venceu (%d)\n", resultado ? 1 : 2, resultado);
-
-    resultado = densidade_1 < densidade_2; // menor vence
-    vitorias_carta1 += resultado;
-    vitorias_carta2 += !resultado;
-    printf("Densidade Populacional: Carta %d venceu (%d)\n", resultado ? 1 : 2, resultado);
-
-    resultado = PIB_per_capita_1 > PIB_per_capita_2;
-    vitorias_carta1 += resultado;
-    vitorias_carta2 += !resultado;
-    printf("PIB per Capita: Carta %d venceu (%d)\n", resultado ? 1 : 2, resultado);
-
-    resultado = SuperPoder_1 > SuperPoder_2;
-    vitorias_carta1 += resultado;
-    vitorias_carta2 += !resultado;
-    printf("Super Poder: Carta %d venceu (%d)\n", resultado ? 1 : 2, resultado);
-
-    // Resultado Final
-    printf("\n--- Resultado Final ---\n");
-    printf("Carta 1 venceu %d atributos.\n", vitorias_carta1);
-    printf("Carta 2 venceu %d atributos.\n", vitorias_carta2);
-
-    printf("Carta %d é a campeã!\n", (vitorias_carta1 > vitorias_carta2) ? 1 : 2);
-
-
     return 0;
 }
